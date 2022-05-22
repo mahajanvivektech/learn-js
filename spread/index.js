@@ -32,3 +32,29 @@ const mathLibrary = {
     return a * b;
   }
 };
+
+// Create shallow copy of an array
+const arr = [1, 2, 3];
+const copy = [...arr];
+console.log(copy);
+
+// Spread operator works all iterables
+const name = 'VIVEK';
+console.log(...name);
+
+// Spread operator also works on objects
+// Can do shallow copies of arrays using spread operator
+const Google = {
+  locations: ['Mountain View', 'New York', 'London']
+};
+
+const GoogleCopy = {
+  ...Google
+}
+console.log(GoogleCopy);
+
+const GoogleWithMoreInfo = {
+  ...Google,
+  founder: 'Larry Page'
+}
+console.log(GoogleWithMoreInfo);
